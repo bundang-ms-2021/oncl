@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(document).bind('keydown',function(e){
+				if ( e.keyCode == 123 /* F12 */) {
+					e.preventDefault();
+					e.returnValue = false;
+				}
+			});
+		});
+		document.onmousedown=disableclick;
+		status="Right click is not available.";
+		
+		function disableclick(event){
+			if (event.button==2) {
+				alert(status);
+				return false;
+			}
+		}
+	</script>
+
+	{% include head.html %}
+
+	<body oncontextmenu='return false' onselectstart='return false' ondragstart='return false' onkeydown="return keydowncheck();">
+		{% include header.html %}
+		{% include page_content.html %}
+		{% include footer.html %}
+		{% include js.html %}
+	</body>
+</html>

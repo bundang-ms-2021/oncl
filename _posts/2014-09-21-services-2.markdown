@@ -1,0 +1,10 @@
+---
+layout: default
+img: img2.png
+category: Services
+title: 바로가기
+description: |
+---
+> 구글 클래스룸 : <a href="https://classroom.google.com/">classroom.google.com</a>                    
+> 학생건강상태자가진단 : <a href = "https://hcs.eduro.go.kr/">hcs.eduro.go.kr</a>           
+> 온라인 클래스 : <a href="https://oc.ebssw.kr/">oc.ebssw.kr</a>           

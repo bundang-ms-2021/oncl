@@ -1,0 +1,32 @@
+# ----------------------- #
+#      Main Configs       #
+# ----------------------- #
+
+url: http://yoursite.com
+title: 분당중 3학년 온라인클래스
+email: helloworld_1620@naver.com
+author: 유태우 (30313)
+description: > 
+  분당중학교 온라인클래스 관리 사이트
+copyright: 'Copyright &copy; 2021 TaewooYu. All Rights Reserved.'
+credits: '.'
+
+# ----------------------- #
+#    Jekyll & Plugins     #
+# ----------------------- #
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# ----------------------- #
+#   3rd Party Settings    #
+# ----------------------- #
+
+social:
+  - title: a
+    url: 
+  - title: b
+    url: 
+  - title: c
+    url: 

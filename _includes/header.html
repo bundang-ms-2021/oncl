@@ -1,0 +1,122 @@
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <a class="navbar-brand page-scroll" href="#home">{{ site.title }}</a>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<section id="home">
+<!-- Header -->
+	<div class="intro-header">
+
+		<div class="container">
+
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="intro-message">
+						<h1>{{ page.title }}</h1>
+						<h3>{{ page.subTitle }}</h3>
+						<hr class="intro-divider">
+						<h2 id = "time">TIME</h2>
+                        <h4 id = "time_sub"></h4>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /.container -->
+
+	</div>
+	<!-- /.intro-header -->
+</section>
+
+<script>
+
+    var start_time = 8 * 60 + 30;
+
+    let time_table = [];
+
+    function SetTimeTable(){
+        var date = new Date();
+
+        let t = [];
+        t.push([20, "아침 시간 - 학생건강상태자가진단", true])
+        t.push([20, "조회", true]);
+        t.push([45, "1교시", false]);
+        t.push([10, "쉬는 시간", true]);
+        t.push([45, "2교시", false]);
+        t.push([10, "쉬는 시간", true]);
+        t.push([45, "3교시", false]);
+        t.push([10, "쉬는 시간", true]);
+        t.push([45, "4교시", false]);
+        t.push([50, "점심 시간", true]);
+        t.push([45, "5교시", false]);
+        t.push([10, "쉬는 시간", true]);
+        t.push([45, "6교시", false]);
+        if(date.getDay() == 2){
+            t.push([10, "쉬는 시간", true]);
+            t.push([45, "7교시", false]);
+        }
+        t.push([30, "종례", false]);
+
+        time_table = t;
+    }
+
+    function Time(){
+        var date = new Date();
+        var time = date.getHours() * 60 + date.getMinutes();
+
+        var i;
+
+        var T = start_time;
+
+        var TIME = document.getElementById("time");
+        var SUB = document.getElementById("time_sub");
+        SUB.innerText = "";
+
+        if(date.getDay() != 0 && date.getDay() != 6){
+
+            if(time < T){
+                TIME.innerText = "수업 없음";
+            }
+            else{
+                for(i = 0; i < time_table.length; i++){
+                    T += time_table[i][0];
+                    TIME.innerText = time_table[i][1];
+                    if(time < T){
+                        if(time_table[i][2] == true) {
+                            SUB.innerText = "(" + time_table[i + 1][1] + " " + (T - time) + "분 남음)";
+                        }
+                        break;
+                    }
+                }
+
+                if(time >= T){
+                    TIME.innerText = "수업 없음";
+                }
+            } 
+        }
+        else{
+            TIME.innerText = "수업 없음";
+        }
+    }
+
+
+    function manage(){
+        Time();
+    }
+
+    function init() {
+        manage();
+        SetTimeTable();
+        Time();
+        setInterval(manage, 1000);
+    }
+
+    init();
+</script>
