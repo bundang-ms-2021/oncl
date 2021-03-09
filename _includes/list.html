@@ -105,10 +105,10 @@
         return dat[subject][data]
       }
   
-      var CopyLink = function(subject, data) {
+      var CopyLink = function(data) {
           var t = document.createElement("textarea");
           document.body.appendChild(t);
-          t.value = GetData(subject, data);
+          t.value = data;
           t.select();
           document.execCommand('copy');
           document.body.removeChild(t);
@@ -123,14 +123,30 @@
         text += `<ul>`;
         for(i = 0; i < loop; i++){
           //document.write();
-          text += `
-          <li><h3>` + GetData(i, 0) + `</h3>
-          <ul>
-            <li>ID  :  ` + GetData(i, 1) + `   <a href='javascript:void(0);'    onclick="CopyLink(` + i + `, 1)"> [복사]</a></li>
-            <li>PW  :  ` + GetData(i, 2) + `   <a href='javascript:void(0);'    onclick="CopyLink(` + i + `, 2)"> [복사]</a></li>
-            <li><a href=` + GetData(i, 3) + `>바로가기</a></li>
-          </ul><br></li>
-          `;
+          text += `<li><h3>` + GetData(i, 0) + `</h3>`;
+          if(GetData(i, 1) == "sp"){
+            var j;  
+            text += `<ul>`;
+            for(j = 0; j < sports.length; j++){
+              text += `<li><h3>` + sports[j][0] + `</h3>`;
+              text += `
+              <ul>
+                <li>ID  :  ` + sports[j][1] + `   <a href='javascript:void(0);'    onclick="CopyLink(` + sports[j][1] + `)"> [복사]</a></li>
+                <li>PW  :  ` + sports[j][2] + `   <a href='javascript:void(0);'    onclick="CopyLink(` + sports[j][2] + `)"> [복사]</a></li>
+                <li><a href=` + sports[j][3] + `>바로가기</a></li>
+              </ul><br></li>`;
+            }
+            text += `</ul>`
+          }
+          else{
+            text += `
+            <ul>
+              <li>ID  :  ` + GetData(i, 1) + `   <a href='javascript:void(0);'    onclick="CopyLink(` + GetData(i, 1) + `)"> [복사]</a></li>
+              <li>PW  :  ` + GetData(i, 2) + `   <a href='javascript:void(0);'    onclick="CopyLink(` + GetData(i, 2) + `)"> [복사]</a></li>
+              <li><a href=` + GetData(i, 3) + `>바로가기</a></li>
+            </ul><br>`;
+          }
+          text += `</li>`;
         }
         text += `</ul>`;
         //space.innerHTML = text;
