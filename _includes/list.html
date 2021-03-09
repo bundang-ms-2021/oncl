@@ -131,8 +131,8 @@
               text += `<li><h3>` + sports[j][0] + `</h3>`;
               text += `
               <ul>
-                <li>ID  :  ` + sports[j][1] + `   <a href='javascript:void(0);'    onclick="CopyLink(` + sports[j][1] + `)"> [복사]</a></li>
-                <li>PW  :  ` + sports[j][2] + `   <a href='javascript:void(0);'    onclick="CopyLink(` + sports[j][2] + `)"> [복사]</a></li>
+                <li>ID  :  ` + sports[j][1] + `   <a href='javascript:void(0);'    onclick="CopyLink("` + sports[j][1] + `")"> [복사]</a></li>
+                <li>PW  :  ` + sports[j][2] + `   <a href='javascript:void(0);'    onclick="CopyLink("` + sports[j][2] + `")"> [복사]</a></li>
                 <li><a href=` + sports[j][3] + `>바로가기</a></li>
               </ul><br></li>`;
             }
@@ -141,8 +141,8 @@
           else{
             text += `
             <ul>
-              <li>ID  :  ` + GetData(i, 1) + `   <a href='javascript:void(0);'    onclick="CopyLink(` + GetData(i, 1) + `)"> [복사]</a></li>
-              <li>PW  :  ` + GetData(i, 2) + `   <a href='javascript:void(0);'    onclick="CopyLink(` + GetData(i, 2) + `)"> [복사]</a></li>
+              <li>ID  :  ` + GetData(i, 1) + `   <a href='javascript:void(0);'    onclick="CopyLink("` + GetData(i, 1) + `")"> [복사]</a></li>
+              <li>PW  :  ` + GetData(i, 2) + `   <a href='javascript:void(0);'    onclick="CopyLink("` + GetData(i, 2) + `")"> [복사]</a></li>
               <li><a href=` + GetData(i, 3) + `>바로가기</a></li>
             </ul><br>`;
           }
