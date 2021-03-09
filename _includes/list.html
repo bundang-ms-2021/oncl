@@ -123,14 +123,14 @@
         text += `<ul>`;
         for(i = 0; i < loop; i++){
           //document.write();
-          text += `<li><h3>` + GetData(i, 0) + `</h3>`;
           text += `
+          <li><h3>` + GetData(i, 0) + `</h3>
           <ul>
             <li>ID  :  ` + GetData(i, 1) + `   <a href='javascript:void(0);'    onclick="CopyLink(` + i + `, 1)"> [복사]</a></li>
             <li>PW  :  ` + GetData(i, 2) + `   <a href='javascript:void(0);'    onclick="CopyLink(` + i + `, 2)"> [복사]</a></li>
             <li><a href=` + GetData(i, 3) + `>바로가기</a></li>
-          </ul><br>`;
-          text += `</li>`;
+          </ul><br></li>
+          `;
         }
         text += `</ul>`;
         //space.innerHTML = text;
