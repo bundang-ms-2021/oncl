@@ -40,22 +40,24 @@
 
     <script>
         function CheckGeology(){
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(CheckPosition);
-        } else {
-          close();
+            if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(CheckPosition);
+            } else {
+            close();
+            }
         }
-      }
 
-      function CheckPosition(position) {
-        var lat = position.coords.latitude; //위도
-        var long = position.coords.longitude; //경도
-        if(lat >= 36 && lat <= 38 && long >= 126 && long <= 128) {
-         
-        }
-        else{
-          close();
-        }
-      } 
+        function CheckPosition(position) {
+            var lat = position.coords.latitude; //위도
+            var long = position.coords.longitude; //경도
+            if(lat >= 36 && lat <= 38 && long >= 126 && long <= 128) {
+            
+            }
+            else{
+            close();
+            }
+        } 
+        
+        CheckGeology();
     </script>
 </head>
