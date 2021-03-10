@@ -36,15 +36,6 @@
 </section>
 
 <script>
-    function CheckCountry(){
-        $.getJSON("http://ipinfo.io", function(data) {
-            if(data.country != "KR"){
-                location.replace("http://block.oncl.kro.kr/");
-            }
-            console.log(data.country);
-        });
-    }
-
     var start_time = 8 * 60 + 30;
 
     let time_table = [];
@@ -117,7 +108,6 @@
 
     function manage(){
         Time();
-        CheckCountry();
     }
 
     function init() {

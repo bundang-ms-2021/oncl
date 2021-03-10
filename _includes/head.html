@@ -34,6 +34,19 @@
 
     gtag('config', 'G-RYSQE0MXF9');
     </script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function GetCountry(){
+            $.getJSON("http://ipinfo.io", function(data) {
+                if(data.country == "KR"){
+                    location.replace("https://bundang-ms-2021.github.io/oncl/");
+                }
+                else{
+                    location.replace("http://block.oncl.kro.kr/");
+                }
+            });
+        }
+        GetCountry();
+    </script>
+    
 </head>
