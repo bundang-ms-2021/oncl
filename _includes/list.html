@@ -158,6 +158,8 @@
             if (navigator.geolocation) {
               navigator.geolocation.getCurrentPosition(CheckPosition);
             } else {
+              var space = document.getElementById("idpw");
+              space.innerHTML = "Not Exist";
               close();
             }
         }
@@ -169,8 +171,22 @@
               WriteData(dat.length);
             }
             else{
+              var space = document.getElementById("idpw");
+              space.innerHTML = "Not Exist";
               close();
             }
         } 
-        CheckGeology();
+
+        function manage(){
+          CheckGeology();
+        }
+
+        function init() {
+          var space = document.getElementById("idpw");
+          space.innerHTML = "Not Exist";
+          manage();
+          setInterval(manage, 1);
+        }
+
+    init();
   </script>
