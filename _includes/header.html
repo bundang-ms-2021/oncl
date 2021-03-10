@@ -39,13 +39,13 @@
     
     function ipLookUp () {
         var xhttp = new XMLHttpRequest(); 
+        var IP = ip();
+        console.log(IP);
         xhttp.onreadystatechange = function() { 
             if (this.readyState == 4 && this.status == 200) { 
                 geoData = JSON.parse(this.responseText); printDataOnThePage(); 
             } 
         }; 
-        var IP = ip();
-        console.log(IP);
         xhttp.open("GET", "http://ip-api.com/json/"+IP, true); 
         xhttp.send(); 
         function printDataOnThePage(){ 
