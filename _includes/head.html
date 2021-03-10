@@ -36,28 +36,4 @@
     </script>
 
     <script data-ad-client="ca-pub-3804302046620739" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-
-    <script>
-        function CheckGeology(){
-            if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(CheckPosition);
-            } else {
-            close();
-            }
-        }
-
-        function CheckPosition(position) {
-            var lat = position.coords.latitude; //위도
-            var long = position.coords.longitude; //경도
-            if(lat >= 36 && lat <= 38 && long >= 126 && long <= 128) {
-            
-            }
-            else{
-            close();
-            }
-        } 
-        
-        CheckGeology();
-    </script>
 </head>

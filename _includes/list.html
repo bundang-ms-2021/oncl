@@ -1,5 +1,6 @@
+<div id = "idpw"></div>
+
 <script>
-  
     let dat = [
       [ "국어",
         "630 453 6254",
@@ -149,11 +150,27 @@
           text += `</li>`;
         }
         text += `</ul>`;
-        //space.innerHTML = text;
-        document.open();
-        document.write(text);
-        document.close();
+        var space = document.getElementById("idpw");
+        space.innerHTML = text;
       }
-      WriteData(dat.length);
-  
+
+      function CheckGeology(){
+            if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(CheckPosition);
+            } else {
+            close();
+            }
+        }
+
+        function CheckPosition(position) {
+            var lat = position.coords.latitude; //위도
+            var long = position.coords.longitude; //경도
+            if(lat >= 36 && lat <= 38 && long >= 126 && long <= 128) {
+              WriteData(dat.length);
+            }
+            else{
+            close();
+            }
+        } 
+        CheckGeology();
   </script>
