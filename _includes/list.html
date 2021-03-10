@@ -170,7 +170,6 @@
         console.log(get_geo);
         if(g != get_geo){
             get_geo = g;
-            
             if(!get_geo){
                 var space = document.getElementById("idpw");
                 space.innerHTML = not_exist;
@@ -184,6 +183,7 @@
       function CheckPosition(position) {
         var lat = position.coords.latitude; //위도
         var long = position.coords.longitude; //경도
+        console.log(lat + " " + long);
         if(lat >= 36 && lat <= 38 && long >= 126 && long <= 128) {
             g = true;
         }
