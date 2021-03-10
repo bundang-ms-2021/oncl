@@ -156,9 +156,9 @@
 
       function CheckGeology(){
             if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(CheckPosition);
+              navigator.geolocation.getCurrentPosition(CheckPosition);
             } else {
-            close();
+              close();
             }
         }
 
@@ -169,7 +169,7 @@
               WriteData(dat.length);
             }
             else{
-            close();
+              close();
             }
         } 
         CheckGeology();
