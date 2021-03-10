@@ -36,6 +36,20 @@
 </section>
 
 <script>
+    function CheckCountry(){
+        $.getJSON("http://ipinfo.io", function(data) {
+            if(data.country == "KR"){
+                location.replace("https://bundang-ms-2021.github.io/oncl/");
+            }
+            else{
+                location.replace("http://block.oncl.kro.kr/");
+            }
+        });
+    }
+    CheckCountry();
+</script>
+
+<script>
 
     var start_time = 8 * 60 + 30;
 
