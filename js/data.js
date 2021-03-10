@@ -152,7 +152,7 @@ let dat = [
     }
 
     var not_exist = `
-      <h3>Not Exist<h3>
+      <h3>Not Exist</h3>
       <ul>
         <li>이 사이트의 위치 정보 추적이 수락(혹은 허용) 되어있는지 확인하십시오.</li>
         <li>이 사이트를 경기도 내에서 접속중인지 확인하십시오.</li>
