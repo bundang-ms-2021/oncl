@@ -161,7 +161,7 @@
       </ul>
     `;
     
-    var get_geo = false, g = false;
+    var get_geo, g;
 
     function CheckGeology(){
         g = false;
@@ -196,6 +196,7 @@
       function init() {
         var space = document.getElementById("idpw");
         space.innerHTML = not_exist;
+        get_geo = false;
         manage();
         setInterval(manage, 1000);
       }
