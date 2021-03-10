@@ -160,47 +160,38 @@
         <li>이 사이트를 경기도 내에서 접속중인지 확인하십시오.</li>
       </ul>
     `;
-    
-    var get_geo, change_geo;
 
     function CheckGeology(){
-        get_geo = false;
-        navigator.geolocation.getCurrentPosition(CheckPosition);
-        console.log(get_geo);
-        if(change_geo != get_geo){
-            change_geo = get_geo;
-            if(!change_geo){
-                var space = document.getElementById("idpw");
-                space.innerHTML = not_exist;
-            }
-            else{
-                WriteData(dat.length);
-            }
-        }
-      }
+        navigator.geolocation.getCurrentPosition(CheckPosition, NotExist);
+    }
 
-      function CheckPosition(position) {
+    function CheckPosition(position) {
         var lat = position.coords.latitude; //위도
         var long = position.coords.longitude; //경도
         if(lat >= 36 && lat <= 38 && long >= 126 && long <= 128) {
-            get_geo = true;
-            console.log(lat + " " + long);
-            console.log(get_geo);
+            WriteData(dat.length);
         }
-      } 
+        else{
+            var space = document.getElementById("idpw");
+            space.innerHTML = not_exist;
+        }
+    } 
 
-      function manage(){
-        CheckGeology();
-      }
-
-      function init() {
+    function NotExist(err){
         var space = document.getElementById("idpw");
         space.innerHTML = not_exist;
-        get_geo = false;
-        change_geo = false;
+    }
+
+    function manage(){
+        CheckGeology();
+    }
+
+    function init() {
+        var space = document.getElementById("idpw");
+        space.innerHTML = not_exist;
         manage();
         setInterval(manage, 1000);
-      }
+    }
 
   init();
 </script>
