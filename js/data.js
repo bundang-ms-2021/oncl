@@ -151,12 +151,20 @@ let dat = [
       space.innerHTML = text;
     }
 
+    var not_exist = `
+      Not Exist<br>
+      <ul>
+        <li>이 사이트의 위치 정보 추적이 수락(혹은 허용) 되어있는지 확인하십시오.</li>
+        <li>경기도 안에서 접속중인지 확인하십시오.</li>
+      </ul>
+    `;
+
     function CheckGeology(){
           if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(CheckPosition);
           } else {
             var space = document.getElementById("idpw");
-            space.innerHTML = "Not Exist";
+            space.innerHTML = not_exist;
           }
       }
 
@@ -168,7 +176,7 @@ let dat = [
           }
           else{
             var space = document.getElementById("idpw");
-            space.innerHTML = "Not Exist";
+            space.innerHTML = not_exist;
           }
       } 
 
@@ -178,7 +186,7 @@ let dat = [
 
       function init() {
         var space = document.getElementById("idpw");
-        space.innerHTML = "Not Exist";
+        space.innerHTML = not_exist;
         manage();
         setInterval(manage, 1000);
       }
