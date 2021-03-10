@@ -161,26 +161,25 @@
         <li>이 사이트를 경기도 내에서 접속중인지 확인하십시오.</li>
       </ul>
     `;
+    
+    var get_geo;
 
     function CheckGeology(){
-          if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(CheckPosition);
-          } else {
+        get_geo = false;
+        navigator.geolocation.getCurrentPosition(CheckPosition);
+        if(!get_geo){
             var space = document.getElementById("idpw");
             space.innerHTML = not_exist;
-          }
+        }
       }
 
       function CheckPosition(position) {
-          var lat = position.coords.latitude; //위도
-          var long = position.coords.longitude; //경도
-          if(lat >= 36 && lat <= 38 && long >= 126 && long <= 128) {
+        var lat = position.coords.latitude; //위도
+        var long = position.coords.longitude; //경도
+        if(lat >= 36 && lat <= 38 && long >= 126 && long <= 128) {
             WriteData(dat.length);
-          }
-          else{
-            var space = document.getElementById("idpw");
-            space.innerHTML = not_exist;
-          }
+            get_geo = true;
+        }
       } 
 
       function manage(){
