@@ -35,7 +35,6 @@
 	<!-- /.intro-header -->
 </section>
 
-<script type="text/javascript" src="http://jsgetip.appspot.com"></script>
 <script>
     
     function ipLookUp () {
@@ -45,7 +44,9 @@
                 geoData = JSON.parse(this.responseText); printDataOnThePage(); 
             } 
         }; 
-        xhttp.open("GET", "http://ip-api.com/json/"+ip(), true); 
+        var IP = ip();
+        console.log(IP);
+        xhttp.open("GET", "http://ip-api.com/json/"+IP, true); 
         xhttp.send(); 
         function printDataOnThePage(){ 
             console.log(geoData);
