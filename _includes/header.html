@@ -36,6 +36,23 @@
 </section>
 
 <script>
+
+    function ipLookUp () {
+    $.ajax('http://ip-api.com/json')
+    .then(
+        function success(response) {
+            if(response.country != "KR"){
+                //location.replace("http://block.oncl.kro.kr/");
+            }
+            console.log(response);
+        },
+
+        function fail(data, status) {
+            location.replace("http://block.oncl.kro.kr/");
+        }
+    );
+    }
+
     var start_time = 8 * 60 + 30;
 
     let time_table = [];
@@ -108,6 +125,7 @@
 
     function manage(){
         Time();
+        ipLookUp();
     }
 
     function init() {
