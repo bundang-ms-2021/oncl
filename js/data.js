@@ -180,7 +180,7 @@ let dat = [
         var space = document.getElementById("idpw");
         space.innerHTML = "Not Exist";
         manage();
-        setInterval(manage, 10);
+        setInterval(manage, 100);
       }
 
   init();
