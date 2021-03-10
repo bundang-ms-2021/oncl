@@ -157,7 +157,6 @@ let dat = [
           } else {
             var space = document.getElementById("idpw");
             space.innerHTML = "Not Exist";
-            window.close();
           }
       }
 
@@ -170,7 +169,6 @@ let dat = [
           else{
             var space = document.getElementById("idpw");
             space.innerHTML = "Not Exist";
-            window.close();
           }
       } 
 
