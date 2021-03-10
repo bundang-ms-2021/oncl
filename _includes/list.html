@@ -168,6 +168,7 @@
         navigator.geolocation.getCurrentPosition(CheckPosition);
         if(g != get_geo){
             get_geo = g;
+            console.log("Y");
             if(!get_geo){
                 var space = document.getElementById("idpw");
                 space.innerHTML = not_exist;
