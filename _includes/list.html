@@ -166,9 +166,11 @@
     function CheckGeology(){
         g = false;
         navigator.geolocation.getCurrentPosition(CheckPosition);
+        console.log(g);
+        console.log(get_geo);
         if(g != get_geo){
             get_geo = g;
-            console.log("Y");
+            
             if(!get_geo){
                 var space = document.getElementById("idpw");
                 space.innerHTML = not_exist;
