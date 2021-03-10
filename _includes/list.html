@@ -161,14 +161,20 @@
       </ul>
     `;
     
-    var get_geo;
+    var get_geo = false, g = false;
 
     function CheckGeology(){
-        get_geo = false;
+        g = false;
         navigator.geolocation.getCurrentPosition(CheckPosition);
-        if(!get_geo){
-            var space = document.getElementById("idpw");
-            space.innerHTML = not_exist;
+        if(g != get_geo){
+            get_geo = g;
+            if(!get_geo){
+                var space = document.getElementById("idpw");
+                space.innerHTML = not_exist;
+            }
+            else{
+                WriteData(dat.length);
+            }
         }
       }
 
@@ -176,8 +182,7 @@
         var lat = position.coords.latitude; //위도
         var long = position.coords.longitude; //경도
         if(lat >= 36 && lat <= 38 && long >= 126 && long <= 128) {
-            WriteData(dat.length);
-            get_geo = true;
+            g = true;
         }
       } 
 
