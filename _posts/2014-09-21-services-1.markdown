@@ -12,7 +12,7 @@ description: |
      
   > **수행**      
   > 역사 (인물 평가 - 금)      
-  > 수학     
+  > 수학 (1단원(제곱근) - 수)    
   > 과학 (화학반응식 - 목)      
 
   > <a href = "https://forms.gle/hAUZGe9o8KbfpddZ6">학부모 반톡 개설 설문지</a>     
