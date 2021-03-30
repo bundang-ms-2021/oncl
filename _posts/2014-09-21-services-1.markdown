@@ -12,7 +12,8 @@ description: |
      
   > **수행**      
   > 역사 (인물 평가)      
-  > 수학      
+  > 수학     
+  > 과학       
 
   > <a href = "https://forms.gle/hAUZGe9o8KbfpddZ6">학부모 반톡 개설 설문지</a>     
   > 1, 2, 9, 10, 11, 12, 18, 21, 22, 23, 28       
