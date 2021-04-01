@@ -40,6 +40,8 @@
 
     let time_table = [];
 
+    var refresh = false;
+
     function SetTimeTable(){
         var date = new Date();
 
@@ -90,6 +92,11 @@
                     if(time < T){
                         if(time_table[i][2] == true) {
                             SUB.innerText = "(" + time_table[i + 1][1] + " " + (T - time) + "분 남음)";
+                            refresh = true;
+                        }
+                        else if(refresh){
+                            refresh = false;
+                            location.reload();
                         }
                         break;
                     }
