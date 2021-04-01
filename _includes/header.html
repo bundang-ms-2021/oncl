@@ -94,11 +94,13 @@
                     if(time < T){
                         if(time_table[i][2] == true) {
                             SUB.innerText = "(" + time_table[i + 1][1] + " " + (T - time) + "분 남음)";
+                            if(!refresh){
+                                location.reload();
+                            }
                             refresh = true;
                         }
-                        else if(refresh){
+                        else{
                             refresh = false;
-                            location.reload();
                         }
                         break;
                     }
