@@ -40,9 +40,11 @@
 
     let time_table = [];
 
-    var refresh = true;
+    //var refresh = true;
 
     var begin = true;
+
+    var current_time_table_num = 0;
 
     function SetTimeTable(){
         var date = new Date();
@@ -94,16 +96,13 @@
                     if(time < T){
                         if(time_table[i][2] == true) {
                             SUB.innerText = "(" + time_table[i + 1][1] + " " + (T - time) + "분 남음)";
-                            if(!refresh && !begin){
-                                location.reload();
-                            }
-                            refresh = true;
                         }
-                        else{
-                            if(refresh && !begin){
+
+                        if(i != current_time_table_num){
+                            current_time_table_num = i;
+                            if(!begin){
                                 location.reload();
                             }
-                            refresh = false;
                         }
                         break;
                     }
