@@ -42,6 +42,8 @@
 
     var refresh = true;
 
+    var begin = true;
+
     function SetTimeTable(){
         var date = new Date();
 
@@ -92,13 +94,13 @@
                     if(time < T){
                         if(time_table[i][2] == true) {
                             SUB.innerText = "(" + time_table[i + 1][1] + " " + (T - time) + "분 남음)";
-                            if(!refresh){
+                            if(!refresh && !begin){
                                 location.reload();
                             }
                             refresh = true;
                         }
                         else{
-                            if(refresh){
+                            if(refresh && !begin){
                                 location.reload();
                             }
                             refresh = false;
@@ -127,6 +129,7 @@
         SetTimeTable();
         Time();
         setInterval(manage, 1000);
+        begin = false;
     }
 
     init();
