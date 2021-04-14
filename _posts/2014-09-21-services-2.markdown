@@ -8,3 +8,6 @@ description: |
 > 구글 클래스룸 : <a href="https://classroom.google.com/">classroom.google.com</a>   
 >                            
 > 학생건강상태자가진단 : <a href = "https://hcs.eduro.go.kr/">hcs.eduro.go.kr</a>           
+>           
+> ※ 누르지 마 (테스트중임)          
+> [학생건강상태자가진단 알리미 보내기]          
