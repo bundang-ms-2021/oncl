@@ -10,7 +10,7 @@ description: |
 > 학생건강상태자가진단 : <a href = "https://hcs.eduro.go.kr/">hcs.eduro.go.kr</a>           
 >           
 > ※ 누르지 마 (테스트중임)          
-> <a href='javascript:void(0);' onClick="sendLinkTest();"> [학생건강상태자가진단 알리미 보내기]</a>          
+> <a href='javascript:void(0);' onClick="sendLink();"> [학생건강상태자가진단 알리미 보내기]</a>          
 
 
 <script>
