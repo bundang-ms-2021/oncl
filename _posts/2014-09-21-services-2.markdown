@@ -40,8 +40,11 @@ description: |
         ]
     });
     ; window.kakaoDemoCallback && window.kakaoDemoCallback() }
-    catch(e) { window.kakaoDemoException && window.kakaoDemoException(e) }
+    catch(e) { window.kakaoDemoException && window.kakaoDemoException(e) 
+    }
+
 </script>
+
 <!--
 <script type="text/javascript">
     function sendLinkTest() {
