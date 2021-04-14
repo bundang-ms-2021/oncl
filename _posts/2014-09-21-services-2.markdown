@@ -51,7 +51,6 @@ description: |
 <script>
 try {
   function sendLinkDefault() {
-    Kakao.init('be7b6525600965cb3f7b82d7b6ebef24')
     Kakao.Link.sendDefault({
       objectType: 'feed',
       content: {
