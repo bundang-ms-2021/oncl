@@ -24,9 +24,8 @@ try {
         imageUrl:
           'https://i.pinimg.com/564x/13/82/70/138270eaf056b70de065b9ad7e44bdf9.jpg',
         link: {
-          mobileWebUrl: 'https://developers.kakao.com/docs/js/kakaotalklink#텍스트-템플릿-보내기',
-          webUrl: 'https://developers.kakao.com/docs/js/kakaotalklink#텍스트-템플릿-보내기',
-
+          mobileWebUrl: 'https://hcs.eduro.go.kr/',
+          webUrl: 'https://hcs.eduro.go.kr/',
         },
       },
       buttons: [
