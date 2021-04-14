@@ -10,13 +10,13 @@ description: |
 > 학생건강상태자가진단 : <a href = "https://hcs.eduro.go.kr/">hcs.eduro.go.kr</a>           
 >           
 > ※ 누르지 마 (테스트중임)          
-> <a href='javascript:void(0);'    onClick="sendLinkDefault()"> [학생건강상태자가진단 알리미 보내기]</a>          
+> <a href='javascript:void(0);'    onClick="sendLink()"> [학생건강상태자가진단 알리미 보내기]</a>          
 
 <script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script>
 try {
     Kakao.init('be7b6525600965cb3f7b82d7b6ebef24');
-  function sendLinkDefault() {
+    function sendLink() {
     Kakao.Link.sendDefault({
       objectType: 'feed',
       content: {

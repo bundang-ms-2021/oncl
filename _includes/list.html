@@ -122,6 +122,30 @@
         alert("복사되었습니다.");
     };
 
+    function kakoSend(subject) {
+      Kakao.Link.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: GetData(subject, 0),
+          description: `ID : ` + GetData(subject, 1) + `\nPW : ` + GetData(subject, 2),
+          imageUrl:'',
+          link: {
+            mobileWebUrl: 'https://bundang-ms-2021.github.io/oncl/',
+            webUrl: 'https://bundang-ms-2021.github.io/oncl/',
+          },
+        },
+        buttons: [
+          {
+              title: '바로 가기',
+              link: {
+              mobileWebUrl: GetData(subject,2),
+              webUrl: GetData(subject,2),
+              }
+          },
+        ],
+      })
+    };
+
     var WriteData = function(loop){
       var i;
 
@@ -141,6 +165,7 @@
               <li>ID  :  ` + sports[j][1] + `   <a href='javascript:void(0);'    onclick="CopyLink('`+sports[j][1]+`')"> [복사]</a></li>
               <li>PW  :  ` + sports[j][2] + `   <a href='javascript:void(0);'    onclick="CopyLink('`+sports[j][2]+`')"> [복사]</a></li>
               <li><a href=` + sports[j][3] + `>바로가기</a></li>
+              
             </ul><br></li>`;
           }
           text += `</ul>`
@@ -151,6 +176,8 @@
             <li>ID  :  ` + GetData(i, 1) + `   <a href='javascript:void(0);'    onclick="CopyLink('`+GetData(i, 1)+`')"> [복사]</a></li>
             <li>PW  :  ` + GetData(i, 2) + `   <a href='javascript:void(0);'    onclick="CopyLink('`+GetData(i, 2)+`')"> [복사]</a></li>
             <li><a href=` + GetData(i, 3) + `>바로가기</a></li>
+            <br>
+            <li><a href='javascript:void(0);'    onClick="kakoSend(` + i + `)"> [카카오톡에 보내기]]</a></li>
           </ul><br>`;
         }
         text += `</li>`;
