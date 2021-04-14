@@ -59,8 +59,8 @@ try {
         imageUrl:
           'https://i.pinimg.com/564x/13/82/70/138270eaf056b70de065b9ad7e44bdf9.jpg',
         link: {
-          mobileWebUrl: 'https://bundang-ms-2021.github.io/oncl/',
-          webUrl: 'https://bundang-ms-2021.github.io/oncl/',
+          mobileWebUrl: 'http://bundang.oncl.kro.kr/',
+          webUrl: 'http://bundang.oncl.kro.kr/',
 
         },
       },
