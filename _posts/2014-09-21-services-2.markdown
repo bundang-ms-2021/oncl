@@ -36,7 +36,7 @@ try {
 ; window.kakaoDemoCallback && window.kakaoDemoCallback() }
 catch(e) { window.kakaoDemoException && window.kakaoDemoException(e) }
 </script>
-
+<!--
 <script type="text/javascript">
     function sendLinkTest() {
         Kakao.init("be7b6525600965cb3f7b82d7b6ebef24");
@@ -44,4 +44,4 @@ catch(e) { window.kakaoDemoException && window.kakaoDemoException(e) }
             templateId: [51770]
         });
     }
-</script>
+</script>-->
