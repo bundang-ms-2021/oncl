@@ -16,31 +16,34 @@ description: |
 <script>
     Kakao.init('be7b6525600965cb3f7b82d7b6ebef24');
     try {
-    function sendLink() {
-        Kakao.Link.createDefaultButton({
-    container: '#CONTAINER_ID',
-    objectType: 'feed',
-    content: {
-        title: '학생건강상태자가진단',
-        description: '',
-        imageUrl:'',
-        link: {
-        mobileWebUrl: 'https://bundang-ms-2021.github.io',
-        androidExecParams: 'oncl',
-        },
-    },
-    buttons: [
-            {
-                title: '바로 가기',
+        function sendLink() {
+            Kakao.Link.createDefaultButton({
+            container: '#CONTAINER_ID',
+            objectType: 'feed',
+            content: {
+                title: '학생건강상태자가진단',
+                description: '',
+                imageUrl:'',
                 link: {
-                mobileWebUrl: 'https://hcs.eduro.go.kr/',
-                webUrl: 'https://hcs.eduro.go.kr/',
+                mobileWebUrl: 'https://bundang-ms-2021.github.io',
+                androidExecParams: 'oncl',
                 },
             },
-        ]
-    });
-    ; window.kakaoDemoCallback && window.kakaoDemoCallback() }
-    catch(e) { window.kakaoDemoException && window.kakaoDemoException(e) 
+            buttons: [
+                    {
+                        title: '바로 가기',
+                        link: {
+                        mobileWebUrl: 'https://hcs.eduro.go.kr/',
+                        webUrl: 'https://hcs.eduro.go.kr/',
+                        },
+                    },
+                ]
+            });
+        }
+        window.kakaoDemoCallback && window.kakaoDemoCallback() 
+    }
+    catch(e) { 
+        window.kakaoDemoException && window.kakaoDemoException(e) 
     }
 
 </script>
