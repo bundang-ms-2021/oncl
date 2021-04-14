@@ -59,8 +59,9 @@ try {
         imageUrl:
           '',
         link: {
-          mobileWebUrl: 'https://bundang-ms-2021.github.io/oncl',
-          webUrl: 'https://bundang-ms-2021.github.io/oncl',
+          mobileWebUrl: 'https://bundang-ms-2021.github.io/oncl/',
+          webUrl: 'https://bundang-ms-2021.github.io/oncl/',
+
         },
       },
       buttons: [
