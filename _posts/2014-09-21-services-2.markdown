@@ -10,7 +10,7 @@ description: |
 > 학생건강상태자가진단 : <a href = "https://hcs.eduro.go.kr/">hcs.eduro.go.kr</a>           
 >           
 > ※ 누르지 마 (테스트중임)          
-> <a href='javascript:void(0);'    onClick="sendLink()"> [학생건강상태자가진단 알리미 보내기]</a>          
+> <a href='javascript:void(0);'    onClick="sendLinkDefault()"> [학생건강상태자가진단 알리미 보내기]</a>          
 
 <script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script>
@@ -21,34 +21,23 @@ description: |
             container: '#CONTAINER_ID',
             objectType: 'feed',
             content: {
-                title: '디저트 사진',
-                description: '아메리카노, 빵, 케익',
-                imageUrl:
-                'http://mud-kage.kakao.co.kr/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+                title: '학생건강상태자가진단',
+                description: '',
+                imageUrl:'',
                 link: {
-                mobileWebUrl: 'https://developers.kakao.com',
-                androidExecParams: 'test',
+                mobileWebUrl: 'https://bundang-ms-2021.github.io',
+                androidExecParams: 'oncl',
                 },
-            },
-            social: {
-                likeCount: 10,
-                commentCount: 20,
-                sharedCount: 30,
             },
             buttons: [
-                {
-                title: '웹으로 이동',
-                link: {
-                    mobileWebUrl: 'https://developers.kakao.com',
-                },
-                },
-                {
-                title: '앱으로 이동',
-                link: {
-                    mobileWebUrl: 'https://developers.kakao.com',
-                },
-                },
-            ]
+                    {
+                        title: '바로 가기',
+                        link: {
+                        mobileWebUrl: 'https://hcs.eduro.go.kr/',
+                        webUrl: 'https://hcs.eduro.go.kr/',
+                        },
+                    },
+                ]
             });
         }
         window.kakaoDemoCallback && window.kakaoDemoCallback() 
@@ -57,6 +46,49 @@ description: |
         window.kakaoDemoException && window.kakaoDemoException(e) 
     }
 
+</script>
+
+<script>
+try {
+  function sendLinkDefault() {
+    Kakao.init('be7b6525600965cb3f7b82d7b6ebef24')
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '딸기 치즈 케익',
+        description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+        imageUrl:
+          'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+        link: {
+          mobileWebUrl: 'https://developers.kakao.com',
+          webUrl: 'https://developers.kakao.com',
+        },
+      },
+      social: {
+        likeCount: 286,
+        commentCount: 45,
+        sharedCount: 845,
+      },
+      buttons: [
+        {
+          title: '웹으로 보기',
+          link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+            webUrl: 'https://developers.kakao.com',
+          },
+        },
+        {
+          title: '앱으로 보기',
+          link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+            webUrl: 'https://developers.kakao.com',
+          },
+        },
+      ],
+    })
+  }
+; window.kakaoDemoCallback && window.kakaoDemoCallback() }
+catch(e) { window.kakaoDemoException && window.kakaoDemoException(e) }
 </script>
 
 <!--
