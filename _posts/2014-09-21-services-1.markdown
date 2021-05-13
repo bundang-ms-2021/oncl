@@ -5,7 +5,8 @@ category: Services
 title: 시간표 & 공지
 description: |
 ---
-       
+  >**영 사 국 기 과 역**       
+
   > 체육 : 배드민턴 준비           
   > 국어 : 책 준비 (목요일)        
 
