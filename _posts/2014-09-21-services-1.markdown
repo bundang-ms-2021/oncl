@@ -12,11 +12,11 @@ description: |
 
 <html>
   <br>
-  <h3 id="time">등교 가능 시간 : </h3>
+  <h3 id="time_go_school">등교 가능 시간 : </h3>
   
   <script>
     function Cal(v){
-      return "08:" + v * 5 + 30;
+      return "08:" + (v * 5 + 30);
     }
     function Time(){
         const monday = 3;
@@ -25,7 +25,7 @@ description: |
 
         var T = start_time;
 
-        var DATA = document.getElementById("time");
+        var DATA = document.getElementById("time_go_school");
 
         var str = "등교 가능 시간 : ";
 
