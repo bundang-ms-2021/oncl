@@ -38,6 +38,7 @@ description: |
           str = "";
         }
         DATA.innerText = str;
+    }
+    Time();
   </script>
-
 </html>
