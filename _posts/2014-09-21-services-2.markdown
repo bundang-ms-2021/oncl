@@ -7,7 +7,7 @@ description: |
 ---
 > 구글 클래스룸 : <a href="https://classroom.google.com/">classroom.google.com</a>   
 >     
-> 이알리미 : <a href="https://www.ealimi.com/">classroom.google.com</a>   
+> e알리미 : <a href="https://www.ealimi.com/">ealimi.com</a>   
 >                            
 > 학생건강상태자가진단 : <a href = "https://hcs.eduro.go.kr/">hcs.eduro.go.kr</a>           
 >           
