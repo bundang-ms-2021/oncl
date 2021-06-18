@@ -26,8 +26,7 @@ description: |
         var T = start_time;
 
         var DATA = document.getElementById("time");
-        SUB.innerText = "";
-
+        
         var str = "등교 가능 시간 : ";
 
         if(date.getDay() != 0 && date.getDay() != 6){
