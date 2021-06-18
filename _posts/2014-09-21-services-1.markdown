@@ -7,4 +7,37 @@ description: |
 ---
   > 체육 : 줄넘기 준비           
   > 국어 : 책 준비 (목요일)     
-  > 사회 : 학습지 검사      
+  > 사회 : 학습지 검사    
+  > 과학 : 자습할 것 준비 (월요일)        
+
+<html>
+  <h2 id="time">등교 가능 시간 : </h2>
+  
+  <script>
+    function Cal(v){
+      return "08:" + v * 5 + 30;
+    }
+    function Time(){
+        const monday = 3;
+
+        var date = new Date();
+
+        var T = start_time;
+
+        var DATA = document.getElementById("time");
+        SUB.innerText = "";
+
+        var str = "등교 가능 시간 : ";
+
+        if(date.getDay() != 0 && date.getDay() != 6){
+          var time = (date.GetDay() + monday - 1) % 5;
+          var time2 = (time + 2) % 5;
+          str += Cal(time)+" ~ " + Cal(time) + " / " + Cal(time2)+" ~ " + Cal(time2);
+        }
+        else{
+          str = "";
+        }
+        DATA.innerText = str;
+  </script>
+
+</html>
