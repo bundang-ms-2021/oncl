@@ -27,7 +27,7 @@ description: |
 
         var DATA = document.getElementById("time_go_school");
 
-        var str = "등교 가능 시간 : ";
+        var str = "등교 가능 시간 : \n";
 
         if(date.getDay() != 0 && date.getDay() != 6){
           var time = (date.getDay() + monday - 1) % 5;
