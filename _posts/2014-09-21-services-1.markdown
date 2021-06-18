@@ -9,7 +9,7 @@ description: |
   > 국어 : 책 준비 (목요일)     
   > 사회 : 학습지 검사    
   > 과학 : 자습할 것 준비 (월요일)        
-      
+
   **시험 범위**
   > <a href = "https://www.ealimi.com/ReceivedNoti/LetterReplyNew/13981360/e31e1bef-aae6-4c18-b562-485d71c90973">[해당 이알리미 바로가기]</a>     
 
@@ -21,7 +21,7 @@ description: |
     function Cal(v){
       return "08:" + (v * 5 + 30);
     }
-    function Time(){
+    function TimeGoSchool(){
         const monday = 3;
 
         var date = new Date();
@@ -42,6 +42,6 @@ description: |
         }
         DATA.innerText = str;
     }
-    Time();
+    TimeGoSchool();
   </script>
 </html>
