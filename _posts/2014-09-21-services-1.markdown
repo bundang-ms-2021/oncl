@@ -11,7 +11,7 @@ description: |
   > 과학 : 자습할 것 준비 (월요일)        
 
 <html>
-  <h2 id="time">등교 가능 시간 : </h2>
+  <h3 id="time">등교 가능 시간 : </h3>
   
   <script>
     function Cal(v){
