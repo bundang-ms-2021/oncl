@@ -10,6 +10,9 @@ description: |
   > 사회 : 학습지 검사    
   > 과학 : 자습할 것 준비 (월요일)        
 
+  **시험 범위**
+  > <a href = "img/services/test.jpg">[시험 범위 바로가기]</a>
+
 <html>
   <br>
   <h3 id="time_go_school">등교 가능 시간 : </h3>
