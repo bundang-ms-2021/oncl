@@ -32,7 +32,7 @@ description: |
         if(date.getDay() != 0 && date.getDay() != 6){
           var time = (5 + monday - date.getDay()) % 5;
           var time2 = (time + 2) % 5;
-          str += Cal(time)+" ~ " + Cal(time+1) + " / " + Cal(time2)+" ~ " + Cal(time2+1);
+          str += Cal(time)+" ~ " + Cal(time+1) + "(정) / " + Cal(time2)+" ~ " + Cal(time2+1) + "(부);
         }
         else{
           str = "";
