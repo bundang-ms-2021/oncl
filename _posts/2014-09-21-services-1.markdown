@@ -30,7 +30,7 @@ description: |
         var str = "등교 가능 시간 : \n";
 
         if(date.getDay() != 0 && date.getDay() != 6){
-          var time = (date.getDay() + monday) % 5;
+          var time = (monday - date.getDay() + 1) % 5;
           var time2 = (time + 2) % 5;
           str += Cal(time)+" ~ " + Cal(time+1) + " / " + Cal(time2)+" ~ " + Cal(time2+1);
         }
