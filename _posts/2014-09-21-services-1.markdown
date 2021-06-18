@@ -11,6 +11,7 @@ description: |
   > 과학 : 자습할 것 준비 (월요일)        
 
 <html>
+  <br>
   <h3 id="time">등교 가능 시간 : </h3>
   
   <script>
