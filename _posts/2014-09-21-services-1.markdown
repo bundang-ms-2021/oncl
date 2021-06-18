@@ -26,11 +26,11 @@ description: |
         var T = start_time;
 
         var DATA = document.getElementById("time");
-        
+
         var str = "등교 가능 시간 : ";
 
         if(date.getDay() != 0 && date.getDay() != 6){
-          var time = (date.GetDay() + monday - 1) % 5;
+          var time = (date.getDay() + monday - 1) % 5;
           var time2 = (time + 2) % 5;
           str += Cal(time)+" ~ " + Cal(time) + " / " + Cal(time2)+" ~ " + Cal(time2);
         }
