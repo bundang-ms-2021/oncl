@@ -5,10 +5,7 @@ category: Services
 title: 시간표 & 공지
 description: |
 ---
-  > 체육 : 줄넘기 준비           
-  > 국어 : 책 준비 (목요일)     
-  > 사회 : 학습지 검사    
-  > 과학 : 자습할 것 준비 (월요일)        
+  > <h3>시험 잘 봐 얘들아</h3>      
 
   **시험 범위**
   > <a href = "https://www.ealimi.com/ReceivedNoti/LetterReplyNew/13981360/e31e1bef-aae6-4c18-b562-485d71c90973">[해당 이알리미 바로가기]</a>     
