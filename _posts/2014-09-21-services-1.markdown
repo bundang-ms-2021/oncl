@@ -5,11 +5,9 @@ category: Services
 title: 시간표 & 공지
 description: |
 ---
-  > <h3>시험 잘 봐 얘들아</h3>      
-
-  **시험 범위**
-  > <a href = "https://www.ealimi.com/ReceivedNoti/LetterReplyNew/13981360/e31e1bef-aae6-4c18-b562-485d71c90973">[해당 이알리미 바로가기]</a>     
-
+  > 국어 : 책 준비      
+  > 진로 : 활동지 제출 (표 채우기 + 장래희망 + 희망하는 이유)     
+      
 <html>
   <br>
   <h3 id="time_go_school">등교 가능 시간 : </h3>
