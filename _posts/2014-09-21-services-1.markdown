@@ -5,8 +5,7 @@ category: Services
 title: 시간표 & 공지
 description: |
 ---
-  > 국어 : 책 준비      
-  > 진로 : 활동지 제출 (표 채우기 + 장래희망 + 희망하는 이유)     
+  > 시간표 : 과 수 진 영 체 음      
       
 <html>
   <br>
