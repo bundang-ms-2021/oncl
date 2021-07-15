@@ -5,6 +5,9 @@ category: Services
 title: 시간표 & 공지
 description: |
 ---
+
+> 3교시 : 성교육      
+> 4~6교시 : 동아리      
       
 <html>
   <br>
