@@ -11,8 +11,9 @@ description: |
 
   > **업데이트**      
   > 2021.8.18 00:31 | 임시시간표에 맞게 시간표 개정     
+  > 2021.8.23 11:52 | 등교 가능 시간 알림 삭제
 
-<html>
+<!--<html>
   <br>
   <h3 id="time_go_school">등교 가능 시간 : </h3>
   
@@ -53,4 +54,4 @@ description: |
     }
     TimeGoSchool();
   </script>
-</html>
+</html>-->
